@@ -1,0 +1,399 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&family=Raleway:wght@500;600&family=Yuji+Mai&family=Zen+Maru+Gothic:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&family=Poppins:wght@300;400;500&family=Raleway:wght@500;600&family=Yuji+Mai&family=Zen+Maru+Gothic:wght@300;400;500&display=swap");
+body {
+  padding: 0 30px;
+  /* font-family: "Noto Sans JP", sans-serif; */
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(225, 225, 225);
+  color: black;
+  transition: background-color 0.5s ease-in, color 0.5s ease-in;
+}
+body.dark-mode {
+  /* font-family: "Noto Sans JP", sans-serif; */
+  background-color: rgb(53, 53, 53);
+  color: rgb(239, 239, 239);
+  /* background-color: rgb(62, 62, 62);
+  color: white; */
+  /* background-image: url(./images/sea2.jpg); */
+  backdrop-filter: blur(10px) saturate(180%);
+}
+body.dark-mode a {
+  color: #fffbfb;
+}
+input[type="text"] {
+  padding: 10px 20px;
+  width: 250px;
+  border-radius: 10px;
+  border-color: white;
+  font-size: 16px;
+}
+input[type="text"]:focus-visible {
+  outline-color: lightcoral;
+  transition: all 0.2s ease-in;
+}
+input[type="submit"] {
+  display: none;
+}
+select {
+  width: 299px;
+  padding: 12px 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  font-size: 17px;
+  appearance: none;
+  /* outline: #277da1; */
+}
+select:focus {
+  outline: 2px solid #277da1;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.7);
+}
+select option {
+  padding: 90px;
+  font-size: 16px;
+}
+/*label for title of open alarms  */
+label[for="OpenorCLoseAlarms"] {
+  font-weight: bold;
+  font-size: 20px;
+}
+/* mail send button */
+button#send {
+  width: 120px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(27, 195, 111);
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 10px;
+}
+button#send:hover {
+  background-color: rgb(8, 196, 4);
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+/* copy button for task and viber message CSS properties  */
+button.copy-button,
+button#taskbut {
+  cursor: pointer;
+  width: 110px;
+  padding: 10px 9px;
+  background-color: rgb(33, 133, 232);
+  color: white;
+  border: none;
+  border-radius: 3px;
+}
+button.copy-button:hover,
+button#taskbut:hover {
+  background-color: rgb(9, 91, 172);
+}
+h3 {
+  cursor: grabbing;
+}
+h3#startexecution {
+  color: rgb(48, 171, 248);
+  border-left: 6px solid rgb(48, 171, 248);
+  padding: 8px;
+}
+h3#opentime {
+  color: rgb(48, 171, 248);
+  border-left: 6px solid #59267c;
+  padding: 8px;
+}
+body.dark-mode h3#opentime {
+  border-left: 6px solid #bda3f6;
+  padding: 8px;
+}
+h2#close {
+  font-size: 30px;
+  background-color: rgb(178, 56, 56);
+  padding: 10px 20px;
+  font-weight: 700;
+  border-radius: 20px;
+}
+h3#closetime {
+  font-size: 20px;
+  color: rgb(200, 65, 8);
+  border-left: 6px solid #59267c;
+  padding: 8px;
+}
+body.dark-mode h3#closetime {
+  border-left: 6px solid #bda3f6;
+  padding: 8px;
+}
+h3#endexecution {
+  color: rgb(200, 65, 8);
+  border-left: 6px solid rgb(200, 65, 8);
+  padding: 8px;
+}
+h2#open {
+  background-color: rgb(53, 148, 231);
+  padding: 10px 20px;
+  font-size: 30px;
+  font-weight: 700;
+  border-radius: 20px;
+}
+/* dark mode light mode toggle button CSS */
+button#mode-toggle {
+  padding: 10px 20px;
+  margin-right: 49px;
+  margin-top: -2px;
+  width: 110px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 800;
+  background-color: rgb(215, 218, 217);
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  letter-spacing: 1px;
+  font-size: 18px;
+}
+button#mode-toggle:hover {
+  background-color: rgb(188, 191, 191);
+  transition: all 0.5s ease;
+}
+
+.box a {
+  text-decoration: underline;
+  color: rgb(15, 92, 159);
+}
+/* .box a p{
+      color: rgb(15, 92, 159) ;
+    } */
+/* webkit scrollbar edit and designing here */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: rgba(225, 225, 225, 0.8);
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  width: 5px;
+  background-color: rgb(137, 9, 9);
+}
+
+/* notification pop up purpose */
+#notification {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-right: 50px;
+  margin-top: 90px;
+  color: white;
+  background-color: rgb(31, 163, 56);
+  font-size: 18px;
+  padding: 10px;
+  transition: all ease-in 0.5s;
+  border-radius: 5px;
+  text-align: center;
+  width: 180px;
+  font-family: "Zen Maru Gothic", serif;
+}
+/* sticky heading for CR CLose when Scrolled */
+.CRcloseHeading {
+  position: sticky;
+  top: 0;
+  margin-top: 10px;
+  z-index: 1;
+  padding: 10px 16px;
+}
+h2#openlink {
+  color: cadetblue;
+  cursor: grabbing;
+}
+h3#RollbackSTARTExecution {
+  color: rgb(22, 163, 9);
+  border-left: 6px solid rgb(36, 106, 21);
+  padding: 8px;
+}
+h3#RollbackENDExecution {
+  color: rgb(22, 163, 9);
+  border-left: 6px solid rgb(36, 106, 21);
+  padding: 8px;
+}
+body.dark-mode h3#RollbackSTARTExecution,
+body.dark-mode h3#RollbackENDExecution {
+  border-left: 6px solid rgb(22, 163, 9);
+  padding: 8px;
+}
+h3#RollbackSTARTMonitoring {
+  color: rgb(227, 135, 14);
+  border-left: 6px solid rgb(212, 124, 9);
+  padding: 8px;
+}
+h3#RollbackENDMonitoring {
+  color: rgb(212, 120, 8);
+  border-left: 6px solid rgb(212, 124, 9);
+  padding: 8px;
+}
+p#status {
+  color: rgb(36, 160, 226);
+  font-weight: 600;
+}
+
+/* select alarms pulldown menu */
+select#alarm-select {
+  text-align: center;
+  width: 160px;
+  margin-left: 8px;
+  outline: none;
+  font-size: 18px;
+}
+select#alarm-select option {
+  font-size: 16px;
+  font-family: "Zen-maru", sans-serif;
+  font-weight: 700;
+}
+/* icons designs are here🎃🧧🎑🎐🎐🧧🎇 */
+i#detailstab {
+  font-size: 36px;
+  color: rgb(31, 31, 31);
+}
+body.dark-mode i#detailstab {
+  font-size: 36px;
+  color: rgb(247, 234, 234);
+  transition: all ease-in-out 0.2s;
+}
+i#viber {
+  color: #59267c;
+  cursor: pointer;
+}
+body.dark-mode i#viber {
+  color: rgb(192, 155, 233);
+  cursor: pointer;
+  transition: all ease-in-out 0.2s;
+}
+
+/* atom icon */
+i#list {
+  font-size: 36px;
+  padding-left: 10px;
+  color: #9d0208;
+}
+body.dark-mode i#list {
+  color: #eee;
+  transition: all ease-in-out 0.2s;
+}
+/* sxc sec message */
+i#commentIcon {
+  color: rgb(46, 147, 206);
+  font-size: 32px;
+  padding-left: 10px;
+}
+body.dark-mode i#commentIcon {
+  color: #eee;
+  transition: all ease-in-out 0.2s;
+}
+body.dark-mode i#commentIcon:hover {
+  color: rgb(46, 147, 206);
+  transition: all ease-in-out 0.2s;
+}
+/* comment icon and table */
+#commentTable {
+  color: #277da1;
+  font-size: 36px;
+  padding-left: 12px;
+}
+body.dark-mode #commentTable {
+  color: #eee;
+  transition: all 0.1s ease-in;
+}
+body.dark-mode #commentTable:hover {
+  color: #87bba2;
+}
+body.dark-mode h2#vibertitle {
+  color: #bda3f6;
+  cursor: pointer;
+}
+h2#vibertitle {
+  color: #59267c;
+  cursor: pointer;
+}
+p#memo {
+  font-family: "Zen Maru Gothic", serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+/* Toggle status for endmonitoring based on open alarms */
+p#statusUpdate {
+  color: rgb(36, 160, 226);
+  font-weight: 600;
+}
+h3#OpenMail {
+  color: rgb(70, 168, 229);
+  font-weight: 700;
+  margin-top: -5px;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+/* clear button in CR input field */
+button#clearField {
+  margin-left: 3px;
+  cursor: pointer;
+  width: 110px;
+  padding: 14px 9px;
+  background-color: rgb(33, 133, 232);
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+button#clearField:hover {
+  background-color: rgb(9, 91, 172);
+}
+/* priority select and label design */
+input[type="radio"] {
+  transform: scale(1) !important;
+  width: 30px;
+  height: 20px;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+label#PriorityTitle {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 300;
+}
+label#p3Tag {
+  font-size: 20px;
+  margin-right: 5px;
+  margin-left: 3px;
+}
+label#p2Tag {
+  font-size: 20px;
+}
+input[type="radio"]:checked + label#p3Tag {
+  /* color: rgb(105, 172, 226); */
+  font-size: 24px;
+  font-weight: 800;
+  background-color: #83c5be;
+  border-radius: 15px;
+  padding: 4px 8px;
+}
+input[type="radio"]:checked + label#p2Tag {
+  /* color: rgb(241, 97, 31); */
+  font-size: 25px;
+  font-weight: 800;
+  background-color: #f7585a;
+
+  border-radius: 15px;
+  padding: 4px 8px;
+}
+.pbox {
+  /* background-color: #bda3f6;
+  width: 300px;
+  height: 40px; */
+  /* padding: 10px 5px; */
+  align-items: center;
+  /* margin-top: 3px; */
+  /* margin-right: -2px; */
+  /* border-radius: 8px; */
+}
+span#star {
+  color: rgb(216, 16, 16);
+  font-weight: 400;
+}

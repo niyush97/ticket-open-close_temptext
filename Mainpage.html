@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Open/CLose定型文</title>
+    <!-- <link rel="icon" type="image/png" href="./darkmode.png"> -->
+    <link rel="icon" href="./images/HP.png">
+  <link rel="stylesheet" href="./main-design.css">
+  <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  </head>
+<!-- <style>
+</style> -->
+<body>
+  <a href="./description.html" id="pretext1"><i class='fas fa-list-alt' id="detailstab" style="font-size: 36px;"></i></a>
+  <a href="./CR_list_Generator.html">
+    <i class='fas fa-atom' id="list"></i></a>
+    <a href="承認依頼文言.html"> 
+      <i class="fa-solid fa-paper-plane" id="commentIcon"></i>
+</a>
+<a href="./comment.html"><i class="fa-solid fa-comments" id="commentTable">..</i></a>
+<a href="./PIR.html"><i class="fa-solid fa-check-to-slot" id="commentIcon"></i></a>
+  <div id="user-input">
+    <h2 id="open">Ticket Open:
+      <button id="mode-toggle" style="position: absolute; right: 0;
+  align-items: center;">☼</button>
+    </h2>
+    <h2 id="openlink">「Ticket link」</h2>
+    <div class="box">
+      <a href="#" id="openCRlink" target="_blank">open link</a>
+      <p id="join-url"></p>
+      <button id="taskbut">Copy</button>
+    </div>
+    <hr>
+    <h3 id="startexecution">Start</h3>
+<p id="template1"> We will start execution of this ticket.</p>
+<button onclick="copyToClipboard('template1')" id="taskbut">copy</button>
+<div id="notification"></div>
+<br>
+<hr>
+<br>
+    <form>
+      <label for="user-input-field">TICKET Number: </label>
+      <input type="text" id="user-input-field" name="user-input-field" oninput="displayUserInput()" autocomplete="off"  required="required">
+      <input type="submit" value="Submit" onclick="handleSubmit(event)">
+      <button id="clearField" class="clearField">clear</button>
+    </form>
+  </div>
+  <br>
+  <div class="prioritySelect">
+    <div class="pbox">
+    <label  id="PriorityTitle">Priority : <span id="star">*</span> </label>
+    
+     <input type="radio" name="p2" id="priority"  value="P3" >
+     <label id="p3Tag">■ P３</label> 
+     <input type="radio" name="p2" id="priority2" value="P2" >
+     <label id="p2Tag">    ■  P２</label> 
+    </div>
+  </div>
+<div class="container"> 
+      <br>    
+      <select id="select-name" onchange="showSelectedOption()">
+        <option value="">名前を選択</option>
+        <!-- <option value="Yoshihiro Tamoto" name="田元">田元 愛大</option> -->
+   
+        <!-- <option value="Moemi Nagane" name="長根">長根 萌恵美</option> -->
+        <option value="Niyush Bajracharya" name="ニユス"> ニユス</option>
+      </select>  
+      <br>
+      <hr>
+      <h3 id="OpenMail">Outlook Mail<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 48 48">
+        <path fill="#1a237e" d="M43.607,23.752l-7.162-4.172v11.594H44v-6.738C44,24.155,43.85,23.894,43.607,23.752z"></path><path fill="#0c4999" d="M33.919,8.84h9.046V7.732C42.965,6.775,42.19,6,41.234,6H17.667c-0.956,0-1.732,0.775-1.732,1.732 V8.84h9.005H33.919z"></path><path fill="#0f73d9" d="M33.919,33.522h7.314c0.956,0,1.732-0.775,1.732-1.732v-6.827h-9.046V33.522z"></path><path fill="#0f439d" d="M15.936,24.964v6.827c0,0.956,0.775,1.732,1.732,1.732h7.273v-8.558H15.936z"></path><path fill="#2ecdfd" d="M33.919 8.84H42.964999999999996V16.866999999999997H33.919z"></path><path fill="#1c5fb0" d="M15.936 8.84H24.941000000000003V16.866999999999997H15.936z"></path><path fill="#1467c7" d="M24.94 24.964H33.919V33.522H24.94z"></path><path fill="#1690d5" d="M24.94 8.84H33.919V16.866999999999997H24.94z"></path><path fill="#1bb4ff" d="M33.919 16.867H42.964999999999996V24.963H33.919z"></path><path fill="#074daf" d="M15.936 16.867H24.941000000000003V24.963H15.936z"></path><path fill="#2076d4" d="M24.94 16.867H33.919V24.963H24.94z"></path><path fill="#2ed0ff" d="M15.441,42c0.463,0,26.87,0,26.87,0C43.244,42,44,41.244,44,40.311V24.438 c0,0-0.03,0.658-1.751,1.617c-1.3,0.724-27.505,15.511-27.505,15.511S14.978,42,15.441,42z"></path><path fill="#139fe2" d="M42.279,41.997c-0.161,0-26.59,0.003-26.59,0.003C14.756,42,14,41.244,14,40.311V25.067 l29.363,16.562C43.118,41.825,42.807,41.997,42.279,41.997z"></path><path fill="#00488d" d="M22.319,34H5.681C4.753,34,4,33.247,4,32.319V15.681C4,14.753,4.753,14,5.681,14h16.638 C23.247,14,24,14.753,24,15.681v16.638C24,33.247,23.247,34,22.319,34z"></path><path fill="#fff" d="M13.914,18.734c-3.131,0-5.017,2.392-5.017,5.343c0,2.951,1.879,5.342,5.017,5.342 c3.139,0,5.017-2.392,5.017-5.342C18.931,21.126,17.045,18.734,13.914,18.734z M13.914,27.616c-1.776,0-2.838-1.584-2.838-3.539 s1.067-3.539,2.838-3.539c1.771,0,2.839,1.585,2.839,3.539S15.689,27.616,13.914,27.616z"></path>
+        </svg><br>
+      <button type="button" id="send" class="btn btn-primary" onclick="sendEmail()">Generate Mail</button>
+    </h3>
+    </div>
+  <hr>
+  <hr>
+  <!--Intimations on Respective  groups for  Open  -->
+  <h2 id="vibertitle">ChatRoom  <i class='fab fa-viber' id="viber" style='font-size:24px'></i> </h2>
+        <h3 id="opentime">For OPEN Correspondence</h3>
+        <p class="input-result" data-template-index="0"></p>
+        <button class="copy-button" onclick="notifyCopy()">copy</button>
+  <hr>
+  <h3 id="opentime"> Tracking Team</h3>
+        <p class="input-result" data-template-index="1"></p>
+        <button class="copy-button" onclick="notifyCopy()">copy</button>
+<br>
+<hr>
+<hr>
+<div class="box">
+    <h2 id="close" class="CRcloseHeading">Ticket Close:</h2>
+    <label for="OpenorCLoseAlarms">Open Alarms:</label>
+    <!-- selector for rollback display -->
+    <select name="OpenAlarms" id="alarm-select">
+      <option value="">ーselectー
+      </option>
+  <option value="yes">yes</option>
+  <option value="no">no</option>
+    </select>
+
+    <h3 id="endexecution">[Alarm Monitoring]</h3>
+    <a href="" id="output-url" target="_blank">Output</a>
+    <p id="concatenated-url"></p>
+<hr>
+ <h3 id="endexecution">End Execution</h3>
+    <p id="status">Status=*Successful</p>
+    <p id="template2">Ending execution. </p>
+    <button onclick="copyToClipboard('template2')" id="taskbut">copy</button>
+<hr>
+<h3 id="endexecution">Start Monitoring</h3>
+    <p id="template3"> monitoring for alarms .</p>
+    <button onclick="copyToClipboard('template3')" id="taskbut">copy</button>
+<hr>
+<h3 id="endexecution">End Monitoring</h3>
+    <p id="statusUpdate">Status=*Healthy</p>
+    <p id="template4">
+      We have checked for ---~~~~~~.</p>
+    <button onclick="copyToClipboard('template4')" id="taskbut">copy</button>
+<hr>
+
+<!-- Rollback execution and monitoring -->
+<div class="Rollback" style="display: none;">
+<h3 id="RollbackSTARTExecution">Start-Rollback-Execution</h3>
+<p id="template5">Starting Rollback-Execution.</p>
+<button onclick="copyToClipboard('template5')" id="taskbut">copy</button>
+<hr>
+<!-- END ROLLBACK-EXECUTION -->
+<h3 id="RollbackENDExecution">End-Rollback</h3>
+<p id="status">Status=*Successful</p>
+<p id="template6">Ending Rollback.</p>
+
+  <p id="memo">添付するファイル： タブよりエクスポートした同様のファイル使用。<br>
+    ファイル形式： .CSV 又は .xlsm</p>
+<button onclick="copyToClipboard('template6')" id="taskbut">copy</button>
+<hr>
+<!-- starting Roll back monitoring -->
+<h3 id="RollbackSTARTMonitoring">Start-Rollback</h3>
+<p id="template7">Started Rollback-now.</p>
+<button onclick="copyToClipboard('template7')"  id="taskbut">copy</button>
+<hr>
+<!-- End rollback monitoring -->
+<h3 id="RollbackENDMonitoring">End-Rollback</h3>
+<p id="status">Status=*Healthy</p>
+<p id="template8">Ending The Rollback- conducted.</p>
+<p id="memo">添付するファイル： タブよりエクスポートした同様のファイル使用。<br>
+  ファイル形式： .CSV 又は .xlsm</p>
+<button onclick="copyToClipboard('template8')" id="taskbut">copy</button>
+<script>
+  window.onload = function(){
+  const alarmSelect = document.getElementById("alarm-select");
+const rollbackDiv = document.querySelector(".Rollback");
+const status = document.getElementById("statusUpdate");
+alarmSelect.addEventListener("change", function() {
+  if (this.value === "yes") {
+    rollbackDiv.style.display = "block";
+    status.textContent="Status=*Degraded ";
+    status.style.color="Red";
+    status.style.fontSize="1.2em";
+  } else {
+    rollbackDiv.style.display = "none";
+    status.textContent="Status=*Healthy";
+    status.style.color="rgb(36, 160, 226)";
+    status.style.fontSize="1.2em";
+  }
+});
+  }
+</script>
+</div>
+<hr>
+<!--Intimations on Respective  groups for  Close  -->
+<h2 id="vibertitle">ChatRoom  <i class='fab fa-viber' id="viber" style='font-size:24px'></i> </h2>
+ <h3 id="closetime">For CLOSE Correspondence</h3>
+    <p class="input-result" data-template-index="2"></p>
+    <button class="copy-button" onclick="notifyCopy()">copy</button> 
+<hr>
+
+<h3 id="closetime"> Tracking Team</h3>
+    <p class="input-result" data-template-index="3"></p>
+    <button class="copy-button" onclick="notifyCopy()">copy</button> 
+<hr>
+<hr>
+<h3 style="color: rgb(70, 168, 229); font-weight: 700;font-size: 22px;">Outlook Mail<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 48 48">
+  <path fill="#1a237e" d="M43.607,23.752l-7.162-4.172v11.594H44v-6.738C44,24.155,43.85,23.894,43.607,23.752z"></path><path fill="#0c4999" d="M33.919,8.84h9.046V7.732C42.965,6.775,42.19,6,41.234,6H17.667c-0.956,0-1.732,0.775-1.732,1.732 V8.84h9.005H33.919z"></path><path fill="#0f73d9" d="M33.919,33.522h7.314c0.956,0,1.732-0.775,1.732-1.732v-6.827h-9.046V33.522z"></path><path fill="#0f439d" d="M15.936,24.964v6.827c0,0.956,0.775,1.732,1.732,1.732h7.273v-8.558H15.936z"></path><path fill="#2ecdfd" d="M33.919 8.84H42.964999999999996V16.866999999999997H33.919z"></path><path fill="#1c5fb0" d="M15.936 8.84H24.941000000000003V16.866999999999997H15.936z"></path><path fill="#1467c7" d="M24.94 24.964H33.919V33.522H24.94z"></path><path fill="#1690d5" d="M24.94 8.84H33.919V16.866999999999997H24.94z"></path><path fill="#1bb4ff" d="M33.919 16.867H42.964999999999996V24.963H33.919z"></path><path fill="#074daf" d="M15.936 16.867H24.941000000000003V24.963H15.936z"></path><path fill="#2076d4" d="M24.94 16.867H33.919V24.963H24.94z"></path><path fill="#2ed0ff" d="M15.441,42c0.463,0,26.87,0,26.87,0C43.244,42,44,41.244,44,40.311V24.438 c0,0-0.03,0.658-1.751,1.617c-1.3,0.724-27.505,15.511-27.505,15.511S14.978,42,15.441,42z"></path><path fill="#139fe2" d="M42.279,41.997c-0.161,0-26.59,0.003-26.59,0.003C14.756,42,14,41.244,14,40.311V25.067 l29.363,16.562C43.118,41.825,42.807,41.997,42.279,41.997z"></path><path fill="#00488d" d="M22.319,34H5.681C4.753,34,4,33.247,4,32.319V15.681C4,14.753,4.753,14,5.681,14h16.638 C23.247,14,24,14.753,24,15.681v16.638C24,33.247,23.247,34,22.319,34z"></path><path fill="#fff" d="M13.914,18.734c-3.131,0-5.017,2.392-5.017,5.343c0,2.951,1.879,5.342,5.017,5.342 c3.139,0,5.017-2.392,5.017-5.342C18.931,21.126,17.045,18.734,13.914,18.734z M13.914,27.616c-1.776,0-2.838-1.584-2.838-3.539 s1.067-3.539,2.838-3.539c1.771,0,2.839,1.585,2.839,3.539S15.689,27.616,13.914,27.616z"></path>
+  </svg></h3>
+
+<h3 id="endexecution">ticketクローズした後の連絡メール</h3>
+<p class="input-result2" data-template-index="4">Hi Team,<br>The related activity has been completed. Designated team has left, and ticket is closed. <br>
+  <span id="CRid"></span><br><br>Best regards<br><span id="selected-username-placeholder"></span> </p>
+<button class="copy-button" onclick="notifyCopy()">copy</button> 
+    <!-- <button onclick="concatenateAndCopy()" class="copy-button">copy</button><br> <br> -->
+
+
+<!-- //======JQUERY LINK============================================ -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="./script1.js"></script>
+</body>
+</html>
